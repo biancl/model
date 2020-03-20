@@ -8,4 +8,4 @@ RUN ["mvn", "clean", "package"]
 RUN ["ls","-l","/code/target"]
 EXPOSE 8080
 
-ENTRYPOINT [ "java", "-jar", "/code/target/*.jar" ]
+ENTRYPOINT [ "java", "-jar", "/code/target/model-0.0.1-SNAPSHOT.jar" ]
