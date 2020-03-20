@@ -5,6 +5,7 @@ WORKDIR /code
 ADD pom.xml /code/pom.xml
 ADD src /code/src
 RUN ["mvn", "clean", "package"]
+RUN ["ls","-l","/code/target"]
 EXPOSE 8080
 
 ENTRYPOINT [ "java", "-jar", "/code/target/*.jar" ]
